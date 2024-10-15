@@ -6,6 +6,18 @@
   --accent-color-hover: #0056b3;
 }
 
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #333;
+    --secondary-color: #ffffff;
+
+    --accent-color: #007bbf;
+    --accent-color-hover: #0056b3;
+  }
+}
+*/
+
 body,
 html {
   margin: 0;
@@ -27,7 +39,7 @@ header {
 
 header a img {
   max-width: 75vw;
-  height: auto;
+  height: 100px;
 }
 
 nav ul {
@@ -63,7 +75,7 @@ header h1 {
 section {
   padding: 20px;
   margin: 20px auto; /* Center the section */
-  background-color: #fff;
+  background-color: var(--primary-color);
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -123,7 +135,7 @@ form textarea {
 form button {
   padding: 10px 20px;
   background-color: var(--accent-color);
-  color: #fff;
+  color: var(--secondary-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -134,7 +146,34 @@ form button:hover {
   background-color: var(--accent-color-hover);
 }
 
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.services-list span {
+  white-space: nowrap;
+}
+
+.services-list span::after {
+  content: "|";
+  margin-left: 10px;
+}
+
+.services-list span:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
 @media (max-width: 600px) {
+  header a img {
+    height: auto;
+  }
+
   section {
     padding: 10px;
     border-radius: 0;

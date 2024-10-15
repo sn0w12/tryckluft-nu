@@ -12,7 +12,7 @@ function showSection() {
             section.style.display = "block";
         }
     } else {
-        document.querySelector("#foretaget").style.display = "block";
+        document.querySelector("#hem").style.display = "block";
     }
 }
 
