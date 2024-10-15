@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #f8f9fa;
+  --secondary-color: #333;
+
+  --accent-color: #007bbf;
+  --accent-color-hover: #0056b3;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+header a img {
+  max-width: 75vw;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding: 10px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color-hover);
+}
+
+header h1 {
+  margin-top: 20px;
+  font-size: 2em;
+  color: var(--secondary-color);
+}
+
+section {
+  padding: 20px;
+  margin: 20px auto; /* Center the section */
+  background-color: #fff;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Limit the width */
+}
+
+section h2 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+section p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+section address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+section a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+section h4 {
+  margin-bottom: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 150px;
+}
+
+form button:hover {
+  background-color: var(--accent-color-hover);
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  form input,
+  form textarea {
+    max-width: 100%; /* Ensure inputs take full width on mobile */
+  }
+
+  form button {
+    width: 100%; /* Ensure button takes full width on mobile */
+    max-width: 100%;
+  }
+}
