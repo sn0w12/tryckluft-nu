@@ -20,11 +20,18 @@
 
 body,
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 header {
@@ -167,6 +174,26 @@ form button:hover {
 .services-list span:last-child::after {
   content: "";
   margin-left: 0;
+}
+
+footer {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 1px solid var(--accent-color);
+  flex-shrink: 0;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
